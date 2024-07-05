@@ -1,0 +1,597 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&family=Raleway:wght@400;700&family=Oswald:wght@400;500;700&display=swap');
+
+
+
+
+
+/* aplicando fontes */
+
+
+/* Título principal */
+h1 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* Corpo do site */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Calendário */
+#calendario {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Quem Somos */
+#quem-somos h2, #quem-somos h3, #quem-somos p {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Formulário de Contato */
+#contato h2,
+#contato label,
+#contato input,
+#contato textarea,
+#contato button {
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+/* Scroll Indicator - para o usuario posicionar no site de acordo com interação de click */
+
+
+
+.scroll-indicator {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 2; /* Garante que fique acima de outros elementos */
+}
+
+
+.dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-bottom: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.dot:hover{
+	background-color: #d4af37;
+	
+}
+
+.dot.active {
+    background-color: #d4af37;
+}
+
+
+/* Nome Wagner Barber */
+#wagner-barber {
+    text-align: center;
+    margin-top: 2rem; /* Espaçamento entre o cabeçalho e o nome */
+	margin-bottom: 2rem;
+}
+
+
+/* Estilo para a logomarca */
+#wagner-barber .logo {
+    position: absolute;
+    left: 350px; /* Ajuste conforme necessário */
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+#wagner-barber .logo img {
+    height: 250px; /* Altura calculada para incluir o nome e o botão */
+    width: auto;
+}
+
+
+#wagner-barber h1 {
+    font-family: "Bebas Neue", cursive;
+    font-size: 4rem;
+    color: #333; /* Cor escura para o nome */
+    margin-bottom: 0;
+}
+
+/* Botão de Chamada para Ação (CTA) */
+.cta-button {
+    display: inline-block;
+    background-color: #d4af37; /* Dourado */
+    color: #222;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #a88529; /* Dourado mais escuro ao passar o mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button .arrow {
+    display: inline-block;
+    margin-left: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    transform: rotate(-135deg); /* Seta para baixo */
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover .arrow {
+    transform: rotate(45deg); /* Seta para cima ao passar o mouse */
+}
+
+
+
+/* Cabeçalho */
+
+
+
+
+
+header {
+    background-color: #222; /* Fundo escuro, simulando madeira */
+    color: #fff;          /* Texto branco para contraste */
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Listras em espiral (opcional) */
+header::before {
+    /* ... (mesmo estilo anterior) ... */
+}
+
+/* Logo e Texto */
+header #logo-synapse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header #logo {
+    border-radius: 50%;
+    border: 5px solid #d4af37; /* Borda dourada */
+    height: 150px;
+    width: 150px;
+}
+
+header #synapse p {
+    font-weight: bold;
+    font-family: "Times New Roman", serif; /* Fonte elegante */
+    font-size: 2rem;
+    color: #d4af37; /* Cor dourada */
+    margin: 0;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #d4af37; /* Cor dourada */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Navegação */
+nav {
+    background-color: #333; /* Fundo escuro para o menu */
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px; /* Aumenta o espaçamento entre os itens do menu */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.8rem 1.5rem; /* Aumenta o padding dos links */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #d4af37; /* Dourado ao passar o mouse */
+    color: #222;
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
+
+
+nav a.active {
+    background-color: #d4af37; /* Dourado ao passar o mouse */
+    color: #222;
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
+
+/* Seções */
+
+/* ... outros estilos ... */
+
+#quem-somos {
+  background-color: #222; /* Cor de fundo inicial */
+  color: #fff;
+  padding: 3rem;
+  text-align: center;
+  position: relative; /* Para o efeito de fade */
+}
+
+.quem-somos-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mvv-container {
+  display: flex;
+  justify-content: space-around; /* Distribui os itens uniformemente */
+}
+
+.mvv-item {
+  flex: 1;
+  margin: 1rem;
+  padding: 1.5rem;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  background-color: rgba(51, 51, 51, 0.8); /* Fundo semi-transparente */
+}
+
+.mvv-item h3 {
+  color: #d4af37;
+  margin-bottom: 1rem;
+}
+
+/* Efeito de fade no scroll */
+#quem-somos::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222; /* Cor de fundo inicial */
+  z-index: -1; /* Atrás do conteúdo */
+}
+
+/* CSS para aplicar a opacidade (style.css) */
+#quem-somos {
+  --opacity: 1; /* Valor inicial */
+}
+
+#quem-somos::before {
+  opacity: var(--opacity); /* Usa a variável CSS */
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+#servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.servico {
+    text-align: left;
+    padding: 30px;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+
+/* ... outros estilos ... */
+
+#servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Removido height: 100vh para se ajustar ao conteúdo */
+    padding: 3rem 0;  /* Aumenta o espaçamento interno */
+    background-color: #f0f0f0;
+}
+
+.servicos-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo */
+    gap: 2rem;
+}
+
+.servico-item {
+    border: 2px solid #d4af37; /* Borda dourada */
+    border-radius: 10px;
+    overflow: hidden; /* Para evitar que a imagem transborde */
+}
+
+.servico-imagem {
+    height: 200px; /* Altura da imagem de fundo */
+    background-size: cover; /* Cobre toda a área com a imagem */
+    background-position: center; /* Centraliza a imagem */
+    transition: transform 0.3s ease; /* Efeito de zoom ao passar o mouse */
+}
+
+.servico-imagem:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
+}
+
+.servico-descricao {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.servico-descricao h3 {
+    color: #333; /* Texto escuro para contraste */
+    margin-bottom: 0.5rem;
+}
+
+.servico-descricao p {
+    color: #555;
+}
+/* ... outros estilos ... */
+
+#quem-somos {
+  background-color: #222; /* Cor de fundo inicial */
+  color: #fff;
+  padding: 3rem;
+  text-align: center;
+  position: relative; /* Para o efeito de fade */
+}
+
+.quem-somos-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mvv-container {
+  display: flex;
+  justify-content: space-around; /* Distribui os itens uniformemente */
+}
+
+.mvv-item {
+  flex: 1;
+  margin: 1rem;
+  padding: 1.5rem;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  background-color: rgba(51, 51, 51, 0.8); /* Fundo semi-transparente */
+}
+
+.mvv-item h3 {
+  color: #d4af37;
+  margin-bottom: 1rem;
+}
+
+/* Efeito de fade no scroll */
+#quem-somos::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222; /* Cor de fundo inicial */
+  z-index: -1; /* Atrás do conteúdo */
+}
+
+
+
+/* CSS para aplicar a opacidade (style.css) */
+#quem-somos {
+  --opacity: 1; /* Valor inicial */
+}
+
+#quem-somos::before {
+  opacity: var(--opacity); /* Usa a variável CSS */
+}
+
+/* ... (outros estilos) ... */
+
+
+
+
+
+.bem-estar-conteudo, .diferencial-conteudo {
+    display: flex;
+    flex-direction: column; /* Em telas menores, as imagens e o texto ficam em coluna */
+    gap: 2rem;
+}
+
+/* Layout em duas colunas em telas maiores */
+@media (min-width: 768px) {
+    .bem-estar-conteudo, .diferencial-conteudo {
+        flex-direction: row; /* Em telas maiores, imagens e texto ficam lado a lado */
+    }
+
+    .bem-estar-imagem, .diferencial-imagem {
+        flex: 1; /* As imagens ocupam 1/3 do espaço */
+    }
+
+    .bem-estar-texto, .diferencial-texto {
+        flex: 2; /* O texto ocupa 2/3 do espaço */
+        text-align: left;
+    }
+}
+
+.bem-estar-imagem img, .diferencial-imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Borda arredondada nas imagens */
+}
+
+
+/* Formulário de Contato */
+#contato {
+    background-color: #222; /* Fundo escuro, simulando madeira */
+    color: #fff;          /* Texto branco para contraste */
+    padding: 3rem;       
+    text-align: center;
+}
+
+#contato h2 {
+    color: #d4af37;      /* Cor dourada para o título */
+    font-family: 'Times New Roman', serif;
+    margin-bottom: 2rem;
+}
+
+#contato form {
+    max-width: 500px;   
+    margin: 0 auto;     
+}
+
+/* Estilos dos campos do formulário */
+
+#contato label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-align: left; /* Alinha os labels à esquerda */
+}
+
+#contato input[type="text"],
+#contato input[type="email"],
+#contato textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid #d4af37;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+/* Estilo do botão de enviar */
+#contato button[type="submit"] {
+    background-color: #d4af37;
+    color: #222;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contato button[type="submit"]:hover {
+    background-color: #a88529; 
+}
+
+/* Rodapé */
+footer {
+    background-color: #333; /* Cor de fundo mais escura */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative; /* Remove a posição fixa */
+    bottom: auto; /* Remove a propriedade bottom */
+    width: auto;  /* Remove a propriedade width */
+}
+
+
+/* ... (outros estilos) ... */
+
+#diferencial .diferencial-conteudo {
+    display: flex; /* Usa Flexbox para alinhar os elementos */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    gap: 2rem;
+}
+
+#diferencial .diferencial-imagem {
+    flex: 1;  /* A imagem ocupa 1/3 do espaço */
+}
+
+#diferencial .diferencial-texto-calendario { /* Novo container para texto e calendário */
+    flex: 2;  /* Texto e calendário ocupam 2/3 do espaço */
+    display: flex;
+    flex-direction: column; /* Texto e calendário em coluna */
+    gap: 2rem;
+}
+
+#diferencial .diferencial-texto {
+    text-align: left;
+}
+
+#diferencial .calendario {
+    width: 100%; 
+    max-width: 400px; 
+    margin: 0 auto; 
+}
+
+/* ... (outros estilos) ... */
+
+.horario { /* Estilo para a coluna de horários */
+    width: 100px; /* Ajuste conforme necessário */
+}
+
+.slot { /* Estilo para as células de horário */
+    cursor: pointer;
+}
+
+.slot.reserved {
+    background-color: #f00; /* Vermelho para reservado */
+    color: white;
+}
+
+#calendario {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#calendario th, #calendario td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#calendario th {
+    background-color: #f2f2f2;
+}
+
+#barber {
+	
+font-size: 2rem;
+	
+}
